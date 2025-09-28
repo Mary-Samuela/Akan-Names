@@ -34,11 +34,11 @@ body {
   background: #fff;
   padding: 25px 30px;
   border-radius: 12px;
-  float: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 400px;
   width: 90%;
   text-align: center;
+  margin: 50px auto;
 }
 /* Label */
 
@@ -52,10 +52,10 @@ body {
 /* Result Section */
 .result {
     margin-top: 20px;
-    padding: 15px;
+    padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 50px;
     text-align: center;
     color: rgb(220, 141, 38);
 }
