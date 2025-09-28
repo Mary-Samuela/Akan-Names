@@ -37,9 +37,8 @@ form.addEventListener('submit', function(event) {
     }
 
     // Display result
-    resultText.innerHTML = `<strong>${akanName}</strong>, <strong>${days[dayOfWeek]}</strong>.`;
+    resultText.innerHTML = `<strong>${akanName}</strong>, <br> You were born on a <strong>${days[dayOfWeek]}</strong>.`;
     resultBox.style.display = "block";
-    document.getElementById("akan-name").textContent = akanName;
-    document.getElementById("day-born").textContent = days[dayOfWeek];
+    form.reset();
 });
 });
