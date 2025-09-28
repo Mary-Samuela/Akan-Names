@@ -1,8 +1,10 @@
-#Akan Name Generator  
-####A web application that generates Akan names based on date of birth and gender.   
-##By Mary  
+#**Akan Name Generator**#  
 
-##Description  
+####A web application that generates Akan names based on date of birth and gender.####  
+
+##By Mary##  
+
+##Description##  
 
 ####The Akan Name Generator is a web-based application inspired by the Ghanaian Akan tradition of naming children according to the day of the week they are born.  
 By simply entering your date of birth and selecting your gender, the application calculates the day of the week you were born and assigns you the corresponding Akan name.
