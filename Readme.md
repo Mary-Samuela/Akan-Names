@@ -1,4 +1,4 @@
-<span style=font-size 18px;> **Akan Name Generator**</span>  
+**Akan Name Generator**    
 
 A web application that generates Akan names based on date of birth and gender. 
 
@@ -17,7 +17,7 @@ A web application that generates Akan names based on date of birth and gender.
 
 **Support and contact details**  
 If you run into issues or have questions, ideas, or contributions:  
-•	Contact me via email: samuelamary@gmail.com  
+•	Contact me via Github    
 •	Contributions, pull requests, and suggestions are highly encouraged.  
 
 **License**  
