@@ -52,35 +52,24 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px gold;
 }
+/* lower section */
+.lower-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+}
 /* Container Section */
-.container {
-  background: gold;
-  padding: 25px 30px;
-  border-radius: 40px;
-  border-bottom: 10px solid;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 500px;
-  width: 90%;
-  text-align: center;
-  margin: 50px auto;
+.form-section {
+    flex: 1;
+    max-width: 400px;
 }
-/* Label */
-
-#akan-form {
- display: block;
-  margin: 12px 0 6px;
-  font-weight: bold;
-  text-align:center;
-}
-
-/* Result Section */
-.result {
-    margin-top: 20px;
-    padding: 20px 10px;
-    background-color: gold;
-    border: 5px solid;
-    border-radius: 50px;
+.container, .result {
+    background: antiquewhite;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: center;
-    color: black;
-    border-style: dashed;
 }

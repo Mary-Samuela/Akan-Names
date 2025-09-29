@@ -27,27 +27,21 @@ form.addEventListener('submit', function(event) {
     const day = parseInt(dateParts[2]);
 
     // Basic date validation
-    if (month < 1 || month > 12 || day < 1 || day > 31 || year < 1900 || year > new Date().getFullYear()) {
-        alert("Please enter a valid date of birth!");
-        return;
-    }
-    if (day < 1 || day > 31) {
-        alert("Please enter a valid day!");
-        return;
-    }
+   if (month < 3) {
+        month += 12;
+        year -= 1;  
+   }
 
-    // spliy year into cc and yy
+    // split year into cc and yy
     const cc = Math.floor(year / 100);
     const yy = year % 100;
 
     // apply formula
-    const formula = Math.floor(( ( (cc/4) - 2*cc - 1) + ((5*yy/4) ) + ((26*(month+1)/10)) + day ) % 7);
+    let formula = (day + Math.floor((13 * (month + 1)) / 5) + yy + Math.floor(yy / 4) + Math.floor(cc / 4) - (2 * cc)) % 7;
 
     // index for day of the week
-    let dayIndex = formula;
-    if (dayIndex < 0) {
-        dayIndex += 7; // Adjust for negative values
-    }
+    let dayIndex = (formula + 6) % 7; 
+    
 
 
     // Get Akan name
@@ -63,4 +57,4 @@ form.addEventListener('submit', function(event) {
     document.getElementById("day-of-week").textContent = days[dayIndex];
     document.getElementById("result-box").style.display = "block";
     });
-});
+}); 
