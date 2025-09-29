@@ -111,9 +111,18 @@ form.addEventListener('submit', function(event) {
 
     // Display result
    const nameElement = document.getElementById("akan-name");
-   nameElement.textContent = akanName.toUpperCase();
-   nameElement.style.color = gender === "male" ? "blue" : 
-   "deeppink";
+   const resultBox = document.getElementById("result-box");
+
+   resultBox.innerHTML = `
+   <h2>Your Akan Name is: 
+   <span style="color:${gender === 
+   "male" ? "blue" : "deeppink"};">
+   ${akanName.toUpperCase()}
+    </span> 
+    </h2>
+    
+   <h3>You were born on a ${days[dayIndex]}</h3>
+   `;
 
       
     document.getElementById("day-of-week").textContent = days[dayIndex];
