@@ -49,11 +49,19 @@ form.addEventListener('submit', function(event) {
     if (gender === "male") {
         akanName = malenames[dayIndex];
     } else if (gender === "female") {
-        akanName = femalenames[dayIndex];  
+        akanName = femalenames[dayIndex]; 
     }
 
     // Display result
-    document.getElementById("akan-name").textContent =akanName;
+   const nameElement = document.getElementById("akan-name");
+   nameElement.textContent = akanName.toUpperCase();
+
+   if (gender === "male") {
+       nameElement.style.color = "blue";
+   } else {
+    nameElement.style.color = "deeppink";
+   }
+   
     document.getElementById("day-of-week").textContent = days[dayIndex];
     document.getElementById("result-box").style.display = "block";
     });
