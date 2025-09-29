@@ -11,8 +11,8 @@ body {
 .page-header h1 {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: antiquewhite;
-    border-bottom: 2px solid;
+    background-color: gold;
+    border-bottom: 5px solid;
     font-size: 2.5rem;
     color:black;
     margin: 0;
@@ -22,6 +22,9 @@ body {
 .about-section {
     padding: 2rem 1.5rem;
     text-align: center;
+}
+.about-section img {
+    height: 200px;
 }
 .about-section h1 {
     font-size: 2.0rem;
@@ -33,11 +36,28 @@ body {
     color: black;
     font-size: 1.2rem;
 }
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.intro-text {
+    flex: 1;
+    text-align: center;
+}
+.side-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px gold;
+}
 /* Container Section */
 .container {
-  background: antiquewhite;
+  background: gold;
   padding: 25px 30px;
   border-radius: 40px;
+  border-bottom: 10px solid;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 500px;
   width: 90%;
@@ -56,10 +76,11 @@ body {
 /* Result Section */
 .result {
     margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    padding: 20px 10px;
+    background-color: gold;
+    border: 5px solid;
     border-radius: 50px;
     text-align: center;
-    color: rgb(220, 141, 38);
+    color: black;
+    border-style: dashed;
 }
