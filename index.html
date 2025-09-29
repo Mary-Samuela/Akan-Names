@@ -31,33 +31,44 @@
             </div>
          </section>
 
-         <!-- lower section -->
-          <div class="lower-section">
-            
-
+                  
          <!-- Container Section -->
-          <section class=form-section>
-            <div class="container">
-                <form id="akan-form">
-                    <label for="dob">Date of Birth:</label>
-                    <input type="date" id="dob" name="dob" required>
-                    <br><br>    
-                    <label for="gender">Gender</label>
-                    <select id="gender" required>
-                        <option value="">Select gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                    <br><br>
-                    <button type="submit">Get Akan Name</button>
-                    <br><br> 
-                </form>
-            </div>
-          </section>
+          <form id="akan-form">
+            <h3> Option 1: Select Your Datee of Birth</h3>
+             <input type="date" id="dob" name="dob">
+                <br><br>
+                
+            <h3>Option 2: Enter Manually</h3>
+            <label for="day">Day:</label>
+            <input type="number" id="day" min="1" max="31" placeholder="DD">
+            
+            <label for="month">Month:</label>
+            <input type="number" id="month" min="1" max="12" placeholder="MM">
+            
+            <label for="year">Year:</label>
+            <input type="number" id="year" min="1900" max="2100" placeholder="YYYY">
 
-          <!-- Result Section -->
-          <section class="result-section">
-            <div class="result">
+            <!-- Hint -->
+             <p id="dob-hint">
+              You can either use the calendar OR manually enter your date of birth.
+             </p>
+             <br>
+
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br><br>
+            <button type="submit">Get Akan Name</button>
+            </form>
+
+            <!-- Result Box -->
+            <div id="result-box" style="display:none; 
+            margin: top 20px;">                
+
+         
                 <h2>Your Akan Name is: <span id="akan-name"></span></h2>
                 <h3>You were born on a <span id="day-of-week"></span></h3>
             </div>
