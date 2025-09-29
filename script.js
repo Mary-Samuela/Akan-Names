@@ -2,14 +2,11 @@
 const malenames=["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"];
 const femalenames=["Akosua","Adwoa","Abenaa","Akua","Yaa","Afua","Ama"];
 const days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const daysofweek=[0,1,2,3,4,5,6];
+
 // Event Listener
 document.addEventListener ('DOMContentLoaded', () => {
     const form = document.getElementById('akan-form');
-    const resultBox = document.getElementById("result");
-    const resultText = document.getElementById("akan-name");
-
-
+    
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -24,21 +21,46 @@ form.addEventListener('submit', function(event) {
         return;
     }
 
-    // Calculate day of the week
-    const birthDate = new Date(dob);
-    const dayOfWeek = birthDate.getDay(); // 0 (Sunday) to 6 (Saturday)
+    const dateParts = dob.split("-");
+    const year = parseInt(dateParts[0]);
+    const month = parseInt(dateParts[1]);
+    const day = parseInt(dateParts[2]);
+
+    // Basic date validation
+    if (month < 1 || month > 12 || day < 1 || day > 31 || year < 1900 || year > new Date().getFullYear()) {
+        alert("Please enter a valid date of birth!");
+        return;
+    }
+    if (day < 1 || day > 31) {
+        alert("Please enter a valid day!");
+        return;
+    }
+
+    // spliy year into cc and yy
+    const cc = Math.floor(year / 100);
+    const yy = year % 100;
+
+    // apply formula
+    const formula = Math.floor(( ( (cc/4) - 2*cc - 1) + ((5*yy/4) ) + ((26*(month+1)/10)) + day ) % 7);
+
+    // index for day of the week
+    let dayIndex = formula;
+    if (dayIndex < 0) {
+        dayIndex += 7; // Adjust for negative values
+    }
+
 
     // Get Akan name
     let akanName = "";
     if (gender === "male") {
-        akanName = malenames[dayOfWeek];
+        akanName = malenames[dayIndex];
     } else if (gender === "female") {
-        akanName = femalenames[dayOfWeek];  
+        akanName = femalenames[dayIndex];  
     }
 
     // Display result
-    resultText.innerHTML = `<strong>${akanName}</strong>, <br> You were born on a <strong>${days[dayOfWeek]}</strong>.`;
-    resultBox.style.display = "block";
-    form.reset();
-});
+    document.getElementById("akan-name").textContent =akanName;
+    document.getElementById("day-of-week").textContent = days[dayIndex];
+    document.getElementById("result-box").style.display = "block";
+    });
 });
