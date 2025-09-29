@@ -13,11 +13,15 @@ A web application that generates Akan names based on date of birth and gender.
 **Technologies Used**  
 •	HTML – for structuring the page.  
 •	CSS – for styling and layout.  
-•	JavaScript – for logic to calculate days of the week and generate Akan names.  
+•	JavaScript – for logic to calculate days of the week and generate Akan names. 
+
+**BDD (Behavior-Driven Development)**
+If the user does not enter anything in the form or if the user enters an invalid date or month or year, the application raises an alert message
+
 
 **Support and contact details**  
 If you run into issues or have questions, ideas, or contributions:  
-•	Contact me via Github    
+•	Contact me via Github: https://github.com/Mary-Samuela     
 •	Contributions, pull requests, and suggestions are highly encouraged.  
 
 **License**  
